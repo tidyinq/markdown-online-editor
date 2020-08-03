@@ -24,7 +24,7 @@ export default {
   },
 
   created() {
-    this.setDefaultText()
+    /// this.setDefaultText() /// test
   },
 
   components: {
@@ -48,6 +48,7 @@ export default {
         counter: '999999',
         typewriterMode: true,
         mode: 'sv',
+        value: '12345',
         preview: {
           delay: 100,
           show: !this.isMobile
@@ -96,7 +97,7 @@ export default {
     setDefaultText() {
       const savedMdContent = localStorage.getItem('vditorvditor') || ''
       if (!savedMdContent.trim()) {
-        localStorage.setItem('vditorvditor', defaultText)
+        localStorage.setItem('vditorvditor', '1234' + defaultText)
       }
     }
   }
